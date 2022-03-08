@@ -1,50 +1,59 @@
 YOUR ONE-STOP PLACEMENT GUIDE
 - By Nishant Chahar
 
-SDE:
+https://www.edureka.co/blog/data-structures-in-python/
+https://www.upgrad.com/blog/data-structures-algorithm-in-python/
+
+# SDE:
 https://www.geeksforgeeks.org/gfg-sde-sheet-a-complete-guide-for-sde-preparation/?ref=ghb
 https://workat.tech/general/article/switch-service-based-companies-product-based-companies-ogtimx0i73bc
 https://docs.python.org/3/tutorial/datastructures.html
 
-C++ Resources:
+# C++ Resources:
 https://www.learncpp.com/
 https://youtube.com/playlist?list=PLLYz8uHU480j37APNXBdPz7YzAi4XlQUF
 
-Python:
+# Python:
 https://youtu.be/8DvywoWv6fI
 https://realpython.com/
 https://docs.python.org/3/
 
-Java:
+# Java:
 https://www.udemy.com/course/object-oriented-programming-oops-for-java-certification/?start=0
 https://www.youtube.com/watch?v=aQatrXw0njs
 https://www.youtube.com/watch?v=ntLJmHOJ0ME&list=PLu0W_9lII9agS67Uits0UnJyrYiXhDS6q
 
-Javascript
+# Javascript
 https://www.youtube.com/watch?v=pN6jk0uUrD8&list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP
 https://www.youtube.com/watch?v=2md4HQNRqJA&list=PLRAV69dS1uWSxUIk5o3vQY2-_VKsOpXLD
 
 
-DSA
+# DSA
 
 Abdul bari Sir (Algos) https://www.youtube.com/watch?v=0IAPZzGSbME&list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O&ab_channel=AbdulBari 
-Dynamic Programming
+
+# Dynamic Programming
 Watch the complete tutorial for Dp on youtube by Aditya Verma
-https://www.youtube.com/watch?v=nqowUJzG-iM&list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&ab_channel=AdityaVerma 
-GFG TOP 20 DP questions
+https://www.youtube.com/watch?v=nqowUJzG-iM&list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&ab_channel=AdityaVerma
+
+# GFG TOP 20 DP questions
 https://www.geeksforgeeks.org/top-20-dynamic-programming-interview-questions/ 
-Practice Qns on Dp section-wise on leetcode 
+
+# Practice Qns on Dp section-wise on leetcode 
 https://leetcode.com/discuss/general-discussion/662866/DP-for-Beginners-Problems-or-Patterns-or-Sample-Solutions 
 https://leetcode.com/discuss/general-discussion/1050391/must-do-dynamic-programming-problems-category-wise	
 https://leetcode.com/discuss/general-discussion/458695/Dynamic-Programming-Patterns	
-InterviewBit
+
+# InterviewBit
 https://www.interviewbit.com/courses/programming/topics/dynamic-programming/ 
-Backtracking 	
+
+# Backtracking 	
 https://www.youtube.com/watch?v=DKCbsiDBN6c&ab_channel=AbdulBari 
 https://www.youtube.com/watch?v=xFv_Hl4B83A&ab_channel=AbdulBari 
 https://www.interviewbit.com/courses/programming/topics/backtracking/
 https://www.geeksforgeeks.org/top-20-backtracking-algorithm-interview-questions/
-More practice questions on Backtracking:
+
+# More practice questions on Backtracking:
 https://leetcode.com/problems/the-k-th-lexicographical-string-of-all-happy-strings-of-length-n/ 
 https://leetcode.com/problems/permutations/ 
 https://leetcode.com/problems/letter-case-permutation/ 
@@ -61,10 +70,12 @@ https://leetcode.com/problems/n-queens/
 https://leetcode.com/problems/sudoku-solver/ 
 https://leetcode.com/problems/regular-expression-matching/ 
 https://leetcode.com/problems/word-ladder-ii/ 
-Greedy
+
+# Greedy
 Watch recording if you are a beginner
 https://www.youtube.com/watch?v=HzeK7g8cD0Y&list=PLqM7alHXFySESatj68JKWHRVhoJ1BxtLW&ab_channel=GeeksforGeeks 
-Solve All problems
+
+# Solve All problems
 https://www.interviewbit.com/courses/programming/topics/greedy-algorithm/ 
 1. Activity Selection
 2. N meetings in one room
@@ -80,13 +91,15 @@ https://www.interviewbit.com/courses/programming/topics/greedy-algorithm/
 12. Geek collects the balls
 13. https://leetcode.com/problems/last-stone-weight/ 
 14. https://leetcode.com/problems/gas-station/ 
-For those DSA, complete all questions from Interviewbit and must
-do coding questions from GFG
+
+# For those DSA, complete all questions from Interviewbit and must do coding questions from GFG
+
 https://www.geeksforgeeks.org/must-do-coding-questions-for-companies-like-amazon-microsoft-adobe/ 
 https://www.interviewbit.com/courses/programming/ 
 For Online Test a little bit of CP IS REQUIRED So, PARTICIPATE IN ALL LEETCODE CONTEST.
-OTHER RESOURCES:--
-For recursion:
+
+# OTHER RESOURCES:--
+## For recursion:
 https://www.techiedelight.com/recursion-practice-problems-with-solutions/ 
 Solve all problems
 https://www.youtube.com/channel/UCmJz2DV1a3yfgrR7GqRtUUA 
@@ -94,13 +107,14 @@ https://www.youtube.com/channel/UCYvQTh9aUgPZmVH0wNHFa1A
 https://www.youtube.com/channel/UCZCFT11CWBi3MHNlGf019nw 
 https://www.youtube.com/channel/UCWSYAntBbdd2SLYUqPIxo0w 
 
-You can find solutions to leetcode and gfg problems on
+# You can find solutions to leetcode and gfg problems on
 Take U Forward: https://www.youtube.com/channel/UCJskGeByzRRSvmOyZOz61ig 
 Pepcoding: https://www.youtube.com/channel/UC7rNzgC2fEBVpb-q_acpsmw 
 Lead Coding: https://www.youtube.com/channel/UC81Q2wnuk5KqOFVgAbq4nUw 
 
-DP CP https://www.youtube.com/watch?v=FAQxdm0bTaw
+# DP CP 
+https://www.youtube.com/watch?v=FAQxdm0bTaw
 https://atcoder.jp/contests/dp
 
-Binary Search: https://www.youtube.com/watch?v=GU7DpgHINWQ 
+# Binary Search: https://www.youtube.com/watch?v=GU7DpgHINWQ 
 
