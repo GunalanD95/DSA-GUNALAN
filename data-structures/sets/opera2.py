@@ -57,3 +57,18 @@ sub_a = a.issubset(b)  #checking if a is subset of b
 sub_b = b.issubset(a)  #checking if b is subset of a
 print("subset a",sub_a)
 print("subset b",sub_b)
+
+# vice versa for superset
+sup_a = a.issuperset(b) #checking if a is superset of b
+sup_b = b.issuperset(a) #checking if b is superset of a
+print("superset a",sup_a)
+print("superset b",sup_b)
+
+
+# Check if there is no common elements in sets
+
+num_1 = {1,2,3,4,5}
+num_2 = {6,7,8,9,10}
+
+dis = num_1.isdisjoint(num_2) # checking if there is no common elements in sets
+print("disjoint",dis)
