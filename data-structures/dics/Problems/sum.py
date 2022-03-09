@@ -5,15 +5,15 @@ from typing import final
 
 a = {'a': 100, 'b':200, 'c':300}
 
-# 1
+# 1 normal method
 sums  = 0
 for i in a:
     sums+=a[i]
 
 print("Sum",sums)
 
-
-# 2
+ 
+# 2 using function loop with list
 def sum_dic(mydic):
     ls = []
     for i in mydic:
@@ -23,3 +23,17 @@ def sum_dic(mydic):
     return final
 
 print("Sum",sum_dic(a))
+
+
+# 3 using values 
+new = 0 
+
+def ret_sum(mydic):
+    e = [] 
+    for j in mydic.values():
+        e.append(j)
+    jk = sum(e)
+    return jk
+
+jk = ret_sum(a)
+print("jk sum",jk)
