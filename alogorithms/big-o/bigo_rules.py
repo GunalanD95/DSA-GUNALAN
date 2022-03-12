@@ -44,7 +44,7 @@ def printfirstitemthenfirsthalfsayhi100times(inp):
 a = [1,2,3,4,5,6,7,8,9,10]
 printfirstitemthenfirsthalfsayhi100times(a)
 
-# Big O notation for the above function is O(n + n/2 + 100) = O(n)
+# Big O notation for the above function is O(1 + n/2 + 100) = O(n)
 # Rule 2 says Drop Constants
 
 def compresstwoboxtw(boxes):
@@ -55,5 +55,21 @@ def compresstwoboxtw(boxes):
         print(j)
 
 compresstwoboxtw([1,2,3,4,5,6,7,8,9,10])
-
 # Big O notation for the above function is O(n + n) = O(2n) = O(n) as per Rule 2
+
+
+## Rule 3 :  Different terms for an input
+
+def loopboxed(boxes1,boxes2):
+    for i in boxes1:
+        print(i)
+
+    for j in boxes2:
+        print(j)
+
+k = ['A','L','Q','Y','M','D','C','R']
+j = ['B','C','A','M','N','D']
+loopboxed(k,j)
+
+
+# The Big-0 for the above will be O( n + n )

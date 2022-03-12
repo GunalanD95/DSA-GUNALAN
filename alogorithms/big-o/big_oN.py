@@ -1,3 +1,5 @@
+#Big O(n) - Linear runtime
+
 # write a function to find something inside a list
 import time
 

@@ -1,4 +1,4 @@
-# O(N) -   input increases but operations remains constant
+# Big O(1) Constant runtime -input increases but operations remains constant
 
 
 def LogFirst2(list):
