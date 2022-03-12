@@ -6,7 +6,6 @@
 
 
 ## Rule 1 Example:
-
 # Worst Case: O(n) is when the loop runs for n times like 'n' is the length of the list (being last element)
 from cmath import log
 
@@ -25,8 +24,6 @@ Findguna(dum_ls)
 
 
 ## Rule 2 Example:
-
-
 def printfirstitemthenfirsthalfsayhi100times(inp):
     print(inp[0]) # print first item
 
@@ -45,8 +42,9 @@ a = [1,2,3,4,5,6,7,8,9,10]
 printfirstitemthenfirsthalfsayhi100times(a)
 
 # Big O notation for the above function is O(1 + n/2 + 100) = O(n)
-# Rule 2 says Drop Constants
 
+
+# Rule 2 says Drop Constants
 def compresstwoboxtw(boxes):
     for i in boxes:
         print(i)
@@ -58,8 +56,8 @@ compresstwoboxtw([1,2,3,4,5,6,7,8,9,10])
 # Big O notation for the above function is O(n + n) = O(2n) = O(n) as per Rule 2
 
 
-## Rule 3 :  Different terms for an input
 
+## Rule 3 :  Different terms for an input
 def loopboxed(boxes1,boxes2):
     for i in boxes1:
         print(i)
@@ -71,5 +69,25 @@ k = ['A','L','Q','Y','M','D','C','R']
 j = ['B','C','A','M','N','D']
 loopboxed(k,j)
 
-
 # The Big-0 for the above will be O( n + n )
+
+
+
+# Rule : 4 Drop Non Dominants
+def printallpairs(nums):
+    for k in nums:  # O(n)
+        print("nums",k)
+    
+
+    for f in nums: # O(n)
+        for s in nums: # O(n)
+            print("And their Sum is :",f+s) 
+
+nos = [1,2,3,4,5]
+printallpairs(nos)
+
+
+# The Big-0 for the above will be O(n + n * n) = O(n^2)
+
+# As per Rule 4 we will drop Non Dominants
+# So her n is non dominant , we will drop the n and  O(n*n) = O(n^2)
