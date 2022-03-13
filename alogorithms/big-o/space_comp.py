@@ -14,7 +14,18 @@ def fooo(n):
 
 fooo(10)
 
-
+# The Big - O of this function for the above function
 # Time Complexity - O(n)
-
 # Space Complexity - O(1)
+
+def arrayNtime(n):
+    arr = []
+    for i in range(n):
+        arr.append('hi')
+    return arr
+
+print(arrayNtime(10))
+
+# The Big - O of this function for the above function
+# Time Complexity - O(n)
+# Space Complexity - O(n) - This is because we are creating a new array of size n
