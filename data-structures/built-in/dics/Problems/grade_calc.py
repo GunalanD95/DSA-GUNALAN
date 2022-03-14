@@ -69,3 +69,30 @@ print(grade_cal(james))
 print(grade_cal(dylan))
 print(grade_cal(jess))
 print(grade_cal(tom))
+
+
+# Method 2 : easy to understand and scalable
+
+def average_cal(marks):
+    return float(sum(marks)) / len(marks)
+
+
+def get_tot_avg(student):
+    ass = average_cal(student['assignment']) # since we need only 10% from this
+    test = average_cal(student['test'])
+    lab = average_cal(student['lab'])
+    return 0.1 * ass + 0.7 * test + 0.2 * lab
+
+def assign_letter_grade(score):
+    if score >= 90: return "A"
+    elif score >= 80: return "B"
+    elif score >= 70: return "C"
+    elif score >= 60: return "D"
+    else : return "E"
+
+def get_grade(stud):
+    total = get_tot_avg(stud)
+    print("Letter Grade of %s is" %(stud["name"]),total)
+    return assign_letter_grade(total)
+
+print("method 2:",get_grade(jack))
