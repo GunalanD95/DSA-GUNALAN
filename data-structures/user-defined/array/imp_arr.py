@@ -27,6 +27,7 @@ class Array(object):
 
     def indexitems(self,num):
         for i in range(num,self.length-1):
+            print("i",i)
             self.data[i] = self.data[i+1]
         del self.data[self.length-1]
         self.length -= 1
@@ -38,6 +39,7 @@ newarr.append(1) # 0
 newarr.append(2) # 1
 newarr.append(3) # 2
 newarr.append(4) # 3
+newarr.append(99) # 4
 print("newarr",newarr.data)
-newarr.delete(0)
+newarr.delete(1)
 print("newarr",newarr.data)
