@@ -64,7 +64,37 @@ def mergesortedarray(ar1,ar2):
 
 
 a = [1,2,3,4,5]
-b = [6,7,8,9,10]
+b = [6,3,8,9,10]
 print(mergesortedarray(a,b))
+
+
+
+# 5 Leetcode Merge Sorted Array
+from typing import List
+
+vu = [1,2,3,0,0,0]
+wu = [2,5,6]
+
+# given
+m  = 3
+n = 3
+
+def mergevu(nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+
+    while m > 0 and n > 0:
+        if nums1[m-1] > nums2[n-1]:
+            nums1[m+n-1] = nums1[m-1]
+            m -= 1
+        else:
+            nums1[m+n-1] = nums2[n-1]
+            n -= 1
+        
+    while n > 0:
+        nums1[m+n-1] = nums2[n-1]
+        n -= 1
+
+
+mergevu(vu,m,wu,n)
+print("num1",vu)
 
 
