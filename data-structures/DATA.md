@@ -4,6 +4,11 @@ https://udemy.com/course/master-the-coding-interview-data-structures-algorithms/
 
 https://www.geeksforgeeks.org/data-structures/
 
+
+# INTERVIEW
+
+https://coggle.it/diagram/W5E5tqYlrXvFJPsq/t/master-the-interview-click-here-for-course-link
+
 ## WHAT IS A DATA STRUCTURE?
 
 ### A data structure is a particular way of organizing data in a computer so that it can be used effectively.
