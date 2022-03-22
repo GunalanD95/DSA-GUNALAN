@@ -58,6 +58,23 @@ class HashTable():
             print ('Key {} not found'.format(key))
 
 
+    def keys(self):
+        keys = []
+        for k , v in enumerate(self.hashmap):
+            for k,v in v:
+                keys.append(k)
+        return keys
+
+
+    def values(self):
+        items = []
+        for k , v in enumerate(self.hashmap):
+            for k,v in v:
+                items.append(v)
+        return items
+
+
+
     def __setitem__(self,key,value):
         self.set(key,value)
 
@@ -74,3 +91,5 @@ print(a.hashmap)
 a.delete("key-34")
 print(a.get("key-1"))
 print(a.hashmap)
+print(a.keys())
+print(a.values())
