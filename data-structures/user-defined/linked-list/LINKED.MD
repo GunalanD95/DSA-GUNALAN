@@ -5,3 +5,7 @@ https://udemy.com/course/master-the-coding-interview-data-structures-algorithms/
 https://www.geeksforgeeks.org/linked-list-set-1-introduction/?ref=lbp
 
 https://visualgo.net/en/list
+
+# Pointers  
+
+https://realpython.com/pointers-in-python/
