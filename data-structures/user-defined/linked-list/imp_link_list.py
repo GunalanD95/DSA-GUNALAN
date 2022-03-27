@@ -22,22 +22,23 @@ linklist = {
 # Linked List Implementation
 
 # Node Class 
-class Node():
+class Node:
 
-    def __init__(self, value):
-        self.value = value
+    def __init__(self, data):
+        self.data = data
         self.next = None
 
 
     def __str__(self):
-        return str({'value': self.value, 'next': self.next})
+        return str({'value': self.data, 'next': self.next})
 
 
-class LinkedList():
+class LinkedList:
     
     def __init__(self,value):
 
         self.head = {'value': value, 'next': None}
+        # self.head = Node(value)
         self.tail = self.head                  # tail is the last node in the list 
         self.length = 1
 
@@ -64,7 +65,7 @@ class LinkedList():
         return array
 
     def insert(self,indx,value):
-
+        headNode = self.head
         if (indx == 0):
             self.prepend(value)
 
@@ -72,15 +73,22 @@ class LinkedList():
             self.append(value)
 
         else:
-            new_Node = {
-                'value': value,
-                'next' : None
-            }
+            while (indx != 0):          
+                indx -= 1
+    
+                if (indx == 1):
+                    newNode = {'value': value, 'next': None}
+                    newNode['next'] = headNode['next']
+                    headNode['next'] = newNode
+                    break
+                
+                headNode = headNode['next']
+                if headNode == None:
+                    break           
+            if indx != 1:
+                print("position out of range")       
+        return self.head
             
-            currentIndx = self.getcurrentNode(indx - 1)
-        return self.print_list() 
-        
-
 
 
     def  __str__(self):
@@ -91,12 +99,15 @@ class LinkedList():
 new_LinkedList = LinkedList(10)
 new_LinkedList.append(9)
 new_LinkedList.append(8)
+new_LinkedList.append(55)
 new_LinkedList.prepend(11)
 print("New Linked List: head", new_LinkedList.head)
 print("New Linked List: tail", new_LinkedList.tail)
 print("New Linked List: length", new_LinkedList.length)
 
-
 print("New Linked List:", new_LinkedList.print_list())
 
-print("LinkedList Insert:",new_LinkedList.insert(1,33))
+print("LinkedList Insert:",new_LinkedList.insert(2,33))
+print("LinkedList Insert:",new_LinkedList.insert(4,99))
+
+print("New Linked List:", new_LinkedList.print_list())
