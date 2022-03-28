@@ -89,6 +89,31 @@ class LinkedList:
                 print("position out of range")       
         return self.head
             
+    def ins_pos(self,pos,value):
+        newNode = {'value': value, 'next': None}
+        temp = self.head
+        for i in range(pos-1):
+            print("st",temp)
+            temp = temp['next']
+            print("end",temp)
+
+        newNode['next'] = temp['next']
+        temp['next'] = newNode
+        self.length += 1
+
+    def remove(self,indx):
+        temp = self.head
+        if (indx == 0):
+            new_head = temp['next']
+            temp = new_head
+        else:
+            for i in range(indx-1):                           # get the leader node of the index
+                temp = temp['next']
+            leader = temp
+            unwantedNoder = leader['next']
+            new_follower = unwantedNoder['next']
+            leader['next'] = new_follower
+            return unwantedNoder['value']
 
 
     def  __str__(self):
@@ -107,7 +132,12 @@ print("New Linked List: length", new_LinkedList.length)
 
 print("New Linked List:", new_LinkedList.print_list())
 
-print("LinkedList Insert:",new_LinkedList.insert(2,33))
+# print("LinkedList Insert:",new_LinkedList.insert(2,33))
 print("LinkedList Insert:",new_LinkedList.insert(4,99))
 
+
+print("LinkedList Insert at index 2:",new_LinkedList.ins_pos(2,33))
+print("New Linked List:", new_LinkedList.print_list())
+print("LinkedList Remove at index 3:",new_LinkedList.remove(3))
+print("LinkedList Remove at index 5:",new_LinkedList.remove(5))
 print("New Linked List:", new_LinkedList.print_list())
