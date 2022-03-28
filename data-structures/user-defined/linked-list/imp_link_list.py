@@ -106,6 +106,7 @@ class LinkedList:
         if (indx == 0):
             new_head = temp['next']
             temp = new_head
+            self.length -= 1
         else:
             for i in range(indx-1):                           # get the leader node of the index
                 temp = temp['next']
@@ -113,6 +114,7 @@ class LinkedList:
             unwantedNoder = leader['next']
             new_follower = unwantedNoder['next']
             leader['next'] = new_follower
+            self.length -= 1
             return unwantedNoder['value']
 
 
