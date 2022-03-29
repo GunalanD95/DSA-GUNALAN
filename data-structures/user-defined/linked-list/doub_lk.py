@@ -20,8 +20,8 @@ class DoublyLinkedList:
         newNode = Node(data)
         temp = self.tail
         self.tail = newNode
-        self.tail.prev = temp.data
-        self.head.next = newNode.data
+        self.tail.prev = temp
+        self.head.next = newNode
         self.length += 1
 
 
@@ -29,8 +29,14 @@ class DoublyLinkedList:
         newNode = Node(data)
         temp = self.head
         self.head = newNode
-        self.head.next = temp.data
+        self.head.next = temp
         self.length += 1
+
+    def printlist(self):
+        cur = self.head
+        while cur:
+            print(cur.data)
+            cur = cur.next
 
     def getLength(self):
         return print(self.length)
@@ -40,3 +46,4 @@ lk.append(5)
 lk.prepend(10)
 print(lk.tail)
 print(lk.head) 
+lk.printlist()
