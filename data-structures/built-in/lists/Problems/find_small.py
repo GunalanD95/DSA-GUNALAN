@@ -34,7 +34,6 @@ def findsmallnum(ls):
     for i in range(0,len(ls)):
         if minm > ls[i]:
             minm = ls[i]
-            print("mim:",minm,"ls:",ls[i])
 
     return minm
 
