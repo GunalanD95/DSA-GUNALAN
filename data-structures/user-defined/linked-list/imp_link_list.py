@@ -64,6 +64,20 @@ class LinkedList:
             currentNode = currentNode['next']
         return array
 
+    # A -> B -> C -> D -> E -> None
+    # E -> D -> C -> B -> A -> None
+    def reverse(self):
+        curNode = self.head
+        prev = None
+        while curNode:
+            nxt = curNode['next']
+            curNode['next']= prev
+            prev = curNode
+            curNode = nxt
+
+        self.head = prev
+        return self.head
+
     def insert(self,indx,value):
         headNode = self.head
         if (indx == 0):
@@ -128,8 +142,7 @@ new_LinkedList.append(9)
 new_LinkedList.append(8)
 new_LinkedList.append(55)
 new_LinkedList.prepend(11)
-print("New Linked List: head", new_LinkedList.head)
-print("New Linked List: tail", new_LinkedList.tail)
+
 print("New Linked List: length", new_LinkedList.length)
 
 print("New Linked List:", new_LinkedList.print_list())
@@ -143,3 +156,9 @@ print("New Linked List:", new_LinkedList.print_list())
 print("LinkedList Remove at index 3:",new_LinkedList.remove(3))
 print("LinkedList Remove at index 5:",new_LinkedList.remove(5))
 print("New Linked List:", new_LinkedList.print_list())
+
+
+print("New Linked List: head", new_LinkedList.head)
+print("New Linked List: tail", new_LinkedList.tail)
+
+print("reverse a list",new_LinkedList.reverse())
