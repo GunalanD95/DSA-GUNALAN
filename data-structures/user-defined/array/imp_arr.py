@@ -26,15 +26,16 @@ class Array(object):
         return item
 
     def indexitems(self,num):
-        for i in range(num,self.length-1):
-            print("j",self.data[i])
+        for i in range(num,self.length-1):         
             self.data[i] = self.data[i+1]
         del self.data[self.length-1]
         self.length -= 1
         return self.data
 
     def insert(self,indx,value):
-        for i in range(indx,self.length):          
+        self.data[self.length] = self.data[self.length-1]
+        for i in range(self.length-1,indx-1,-1):
+            print(i,"i",self.data[i])     
             self.data[i+1] = self.data[i]
         self.data[indx] = value
         self.length += 1
@@ -53,8 +54,8 @@ newarr.append(2) # 1
 newarr.append(3) # 2
 newarr.append(4) # 3
 newarr.append(99) # 4
-print("before del",newarr.data)
-newarr.delete(1)
-print("newarr aft del",newarr.data)
-newarr.insert(1,888)
-print("newarr aft insert 888",newarr.data)
+# print("before del",newarr.data)
+# newarr.delete(1)
+print("newarr aft del",newarr.print_list())
+newarr.insert(2,945)
+print("newarr aft insert 2",newarr.print_list())
