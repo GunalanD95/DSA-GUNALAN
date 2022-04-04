@@ -67,16 +67,22 @@ class LinkedList:
     # A -> B -> C -> D -> E -> None
     # E -> D -> C -> B -> A -> None
     def reverse(self):
-        curNode = self.head
-        prev = None
-        while curNode:
-            nxt = curNode['next']
-            curNode['next']= prev
-            prev = curNode
-            curNode = nxt
+        if self.head['next'] == None:
+            return self.head
 
+        curNode = self.head                            # create a temp node to traverse the list
+        self.tail = self.head                          # set the tail to the head
+        prev = None                                    # create a temp node to store the previous node
+        nxt = None                                     # create a temp node to store the next node
+        while curNode:                                 # while the current node is not None
+            nxt = curNode['next']                      # store the next node 
+            curNode['next']= prev                      # reverse the link
+            prev = curNode                             # store the current node to the previous node
+            curNode = nxt                              # move the current node to the next node
+
+        self.head['next'] = None                       # set the head to the previous node
         self.head = prev
-        return self.head
+        return self.print_list()
 
     def insert(self,indx,value):
         headNode = self.head
