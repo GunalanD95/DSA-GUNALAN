@@ -48,7 +48,7 @@ class Array(object):
         return ar
 
 
-newarr = Array();
+newarr = Array()
 newarr.append(1) # 0
 newarr.append(2) # 1
 newarr.append(3) # 2
