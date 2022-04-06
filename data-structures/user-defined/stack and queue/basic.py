@@ -20,9 +20,8 @@ class Stack():
         if self.top != None:
             return self.top.value
 
-
     def push(self,value):
-        if self.top == None:
+        if self.isEmpty():
             newNode = Node(value)
             self.top = newNode
             self.bottom = newNode
@@ -46,12 +45,28 @@ class Stack():
         return ar
 
     def pop(self):
+        if self.top  == self.bottom:
+            self.top = None
+            self.bottom = None
+            self.length -=1
+            return self.top.value
+            
         if self.top:
             temp = self.top
             self.top =  temp.next
             self.length -=1
-            
-        return self.top.value
+            return temp.value
+
+
+    def isEmpty(self):
+        if self.length == 0:
+            return True
+        else:
+            return False
+
+
+    def __str__(self):
+        return str(self.print_stack())
 
 stack = Stack()
 stack.push(5)
@@ -62,4 +77,5 @@ print("bottom",stack.bottom.value)
 print("top",stack.top.value)
 print("length",stack.length)
 print("peek",stack.peek())
-print("stack list",stack.print_stack())
+print("pop",stack.pop())
+print(stack)
