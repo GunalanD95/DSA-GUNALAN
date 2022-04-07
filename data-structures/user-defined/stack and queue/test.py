@@ -1,26 +1,18 @@
-# Implementation of a queue 
-
 class Node:
     def __init__(self,value):
         self.value = value
-        self.next = next
+        self.next = None
 
-class Queue():
+class MyQueue:
 
-    def __init__(self) -> None:
-        self.top =  None
+    def __init__(self):
+        self.top = None
         self.bottom = None
         self.length = 0
 
-    def peek(self):
-        if self.top != None:
-            return self.top.value
-
-
-
-    def enqueue(self,value):
-        newNode = Node(value)
-        if self.isEmpty():
+    def push(self, x: int) -> None:
+        newNode = Node(x)
+        if self.empty():
             self.top = newNode
             self.top.next = newNode
             self.bottom = newNode
@@ -33,26 +25,31 @@ class Queue():
             self.bottom.next = None
             self.length += 1
 
-
-    def dequeue(self):
+    def pop(self) -> int:
         if self.top  == self.bottom:
+            self.top == None
             self.bottom = None
             self.length -=1
             return self.top.value
             
-        if self.top:
+        else:
             temp = self.top
             self.top =  temp.next
             self.length -=1
             return temp.value
+        
 
+    def peek(self) -> int:
+        if self.top != None:
+            return self.top.value
+        
 
-    def isEmpty(self):
-        if self.length == 0:
+    def empty(self) -> bool:
+        if self.length  == 0:
             return True
         else:
             return False
-
+        
     def print_stack(self):
         cur = self.top
         ar = []
@@ -62,16 +59,11 @@ class Queue():
         return ar    
 
 
-sr = Queue()
-sr.enqueue(99)
-sr.enqueue(1)
-sr.enqueue(2)
-print("queue",sr.print_stack())
-sr.enqueue(3)
-sr.enqueue(4)
-print("queue",sr.print_stack())
-print("queue",sr.print_stack())
-print("peek",sr.peek())
-print("dequeue",sr.dequeue())
-print("queue",sr.print_stack())
-    
+myQueue = MyQueue()
+myQueue.push(1)
+print(myQueue.print_stack())
+# myQueue.push(2)
+print(myQueue.print_stack())
+print(myQueue.peek())
+print(myQueue.pop())
+myQueue.empty(); 
