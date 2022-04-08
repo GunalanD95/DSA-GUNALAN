@@ -4,6 +4,8 @@ https://udemy.com/course/master-the-coding-interview-data-structures-algorithms/
 
 https://www.geeksforgeeks.org/data-structures/
 
+https://medium.com/@namanbhalla/my-experience-with-ib-academy-c670df4a3ec6
+
 
 # INTERVIEW
 
