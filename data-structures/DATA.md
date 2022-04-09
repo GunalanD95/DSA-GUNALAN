@@ -7,6 +7,10 @@ https://www.geeksforgeeks.org/data-structures/
 https://medium.com/@namanbhalla/my-experience-with-ib-academy-c670df4a3ec6
 
 
+# Exercise
+
+## https://www.hackerearth.com/practice/data-structures/
+
 # INTERVIEW
 
 https://coggle.it/diagram/W5E5tqYlrXvFJPsq/t/master-the-interview-click-here-for-course-link
