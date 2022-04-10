@@ -1,5 +1,8 @@
 # Binary Tree - DATA
+import json
 
+from pandas import json_normalize
+from sqlalchemy import true
 
 # Binary Tree Node
 class BinaryTreeNode:
@@ -21,28 +24,53 @@ class BinarySearchTreeNode():
             self.root = newNode
 
         else:
-            while True:
-                cur =  self.root
-                if value < cur.value:
-                    if cur.left != None:
-                        cur.left = newNode
-                    cur = cur.left
-                    if cur == None:
-                        break
-                    
-                else:
-                    if cur.right != None:
-                        cur.right = newNode
-                    cur = cur.right
-                
-                    
+            self._insert(value,self.root)
+
+
+    def _insert(self,value,cur_node):
+        if value < cur_node.value:
+            newNode = BinaryTreeNode(value)
+            if cur_node.left is None:
+                cur_node.left = newNode
+            else:
+                self._insert(value,cur_node.left)
+
+        elif value > cur_node.value:
+            newNode = BinaryTreeNode(value)
+            if cur_node.right is None:
+                cur_node.right = newNode
+            else:
+                self._insert(value,cur_node.right)
+
+        else:
+            print("Value already in tree!")
+
+
+    def search(self,value):
+        if self.root:
+            is_found =  self._search(value,self.root)
+            if is_found:
+                return True
+            return False
+        else:
+            print("No Data in the Tree")
+
+
+    def _search(self,value,cur_node):
+        if value > cur_node.value and cur_node.right:
+            return self._search(value,cur_node.right)
+
+        elif value < cur_node.value and cur_node.left:
+            return self._search(value,cur_node.left)
+
+
+        if value == cur_node.value:
+            return True
 
 
     def lookup(self,value):
         pass
 
-    def __str__(self):
-        return str(self.root)
 
 
 bt = BinarySearchTreeNode()
@@ -52,5 +80,7 @@ bt.insert(6)
 bt.insert(20)
 bt.insert(170)
 bt.insert(15)
-bt.insert(1)
+print(bt.search(15))
 print("bt",bt.root.value)
+print("bt",bt.root.left.value)
+print("bt",bt.root.right.value)
