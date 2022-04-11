@@ -12,6 +12,10 @@ class BinaryTreeNode:
         self.right = None
 
 
+    def __str__(self) -> str:
+        return str({'left': self.left, 'right': self.right, 'value': self.value})
+
+
 class BinarySearchTreeNode():
 
     def __init__(self) -> None:
@@ -50,7 +54,7 @@ class BinarySearchTreeNode():
         if self.root:
             is_found =  self._search(value,self.root)
             if is_found:
-                return True
+                return is_found
             return False
         else:
             print("No Data in the Tree")
@@ -65,11 +69,19 @@ class BinarySearchTreeNode():
 
 
         if value == cur_node.value:
-            return True
+            return cur_node
 
 
-    def lookup(self,value):
-        pass
+    def remove(self,value):
+        if self.root:
+            node = self.search(value)
+            if node.right:
+                temp = node.right
+                node = temp
+            else:
+                temp = node.left
+                node = temp
+        return node
 
 
 
@@ -79,8 +91,10 @@ bt.insert(4)
 bt.insert(6)
 bt.insert(20)
 bt.insert(170)
+bt.insert(1)
 bt.insert(15)
 print(bt.search(15))
+print("remove",bt.remove(4))
 print("bt",bt.root.value)
 print("bt",bt.root.left.value)
 print("bt",bt.root.right.value)
