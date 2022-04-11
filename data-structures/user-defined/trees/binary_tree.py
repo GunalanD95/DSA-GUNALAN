@@ -75,13 +75,7 @@ class BinarySearchTreeNode():
     def remove(self,value):
         if self.root:
             node = self.search(value)
-            if node.right:
-                temp = node.right
-                node = temp
-            else:
-                temp = node.left
-                node = temp
-        return node
+            
 
 
 
@@ -94,6 +88,7 @@ bt.insert(170)
 bt.insert(1)
 bt.insert(15)
 print(bt.search(15))
+print(bt.search(1))
 print("remove",bt.remove(4))
 print("bt",bt.root.value)
 print("bt",bt.root.left.value)
