@@ -1,8 +1,4 @@
 # Binary Tree - DATA
-import json
-
-from pandas import json_normalize
-from sqlalchemy import true
 
 # Binary Tree Node
 class BinaryTreeNode:
@@ -73,16 +69,61 @@ class BinarySearchTreeNode():
 
 
     def remove(self,value):
-        if self.root:
-            node = self.search(value)
+        if self.root == None:
+            return None
+
+        else:
+            self._remove(self.root,value)
+
+        return self.root
+
+    def _remove(self,cur_node,value):
+        if self.root == None:
+            return None
+        elif value < cur_node.value:
+            cur_node = cur_node.left
+            self._remove(cur_node,value)
+            print("left node",cur_node)
+
+        elif value > cur_node.value:
+            cur_node = cur_node.right
+            self._remove(cur_node,value)
+            print("right node",cur_node)
+
+        if value == cur_node.value:
+            print("curNode value",cur_node)
+            if cur_node.left ==  None and cur_node.right ==  None:
+                print("yes")
+                cur_node =  None
             
+            elif cur_node.left ==  None:
+                temp = cur_node
+                print("temp left",cur_node)
+                cur_node = cur_node.right
+                print("right",cur_node)
+                del temp
+                
+            elif cur_node.right ==  None:
+                temp = cur_node
+                print("temp right:",cur_node)
+                cur_node = cur_node.left
+                print("left",cur_node)
+                del temp
+
+            else:
+                temp =  self.findmin(cur_node)
+                cur_node = cur_node.left
+                del temp
 
 
+    def findmin(self,cur_node):
+        pass
+                
 
 bt = BinarySearchTreeNode()
 bt.insert(9)
 bt.insert(4)
-bt.insert(6)
+# bt.insert(6)
 bt.insert(20)
 bt.insert(170)
 bt.insert(1)
@@ -90,6 +131,7 @@ bt.insert(15)
 print(bt.search(15))
 print(bt.search(1))
 print("remove",bt.remove(4))
+# print("remove",bt.remove(170))
 print("bt",bt.root.value)
 print("bt",bt.root.left.value)
 print("bt",bt.root.right.value)
