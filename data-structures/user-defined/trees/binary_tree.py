@@ -112,26 +112,52 @@ class BinarySearchTreeNode():
 
             else:
                 temp =  self.findmin(cur_node)
-                cur_node = cur_node.left
-                del temp
+                cur_node.value = temp
+                cur_node.right = self._remove(cur_node.right,temp)
 
 
     def findmin(self,cur_node):
-        pass
+        current = cur_node
+        while(current.right is not None):
+            current = current.right
+        print("min",current)
+        return current.value
                 
+
+    def LevelOrder(self):
+        if self.root == None:
+            return None
+        else:
+            self._LevelOrder(self.root)
+
+    def _LevelOrder(self,cur_node):
+        queue = []
+        queue.append(cur_node)
+        while(len(queue) > 0):
+            cur_node = queue.pop(0)
+            print(cur_node.value)
+            if cur_node.left:
+                queue.append(cur_node.left)
+            if cur_node.right:
+                queue.append(cur_node.right)
+        
 
 bt = BinarySearchTreeNode()
 bt.insert(9)
 bt.insert(4)
-# bt.insert(6)
+bt.insert(6)
 bt.insert(20)
-bt.insert(170)
+bt.insert(77)
 bt.insert(1)
 bt.insert(15)
 print(bt.search(15))
 print(bt.search(1))
-print("remove",bt.remove(4))
+print("remove",bt.remove(20))
 # print("remove",bt.remove(170))
 print("bt",bt.root.value)
 print("bt",bt.root.left.value)
 print("bt",bt.root.right.value)
+
+
+print(" ")
+print("BST----",bt.LevelOrder())
