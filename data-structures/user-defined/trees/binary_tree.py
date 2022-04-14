@@ -28,6 +28,10 @@ class BinarySearchTreeNode():
 
 
     def _insert(self,value,cur_node):
+
+        if value == cur_node.value:
+            raise ValueError("Duplicates not allowed")
+
         if value < cur_node.value:
             newNode = BinaryTreeNode(value)
             if cur_node.left is None:
