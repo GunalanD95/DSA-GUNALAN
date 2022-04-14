@@ -32,3 +32,17 @@ while(num < len(list1)):
       
     # increment num 
     num += 1
+    
+print(" ")
+
+# 3 Using Loop loop - nEgative
+
+def ReturnNeg(ls):
+    lst = []
+    for i in ls:
+        if i < 0:
+            lst.append(i)
+
+    return lst
+
+print("negative numbers are",ReturnNeg(list1))
