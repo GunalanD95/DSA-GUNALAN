@@ -6,6 +6,8 @@ https://www.geeksforgeeks.org/data-structures/
 
 https://medium.com/@namanbhalla/my-experience-with-ib-academy-c670df4a3ec6
 
+https://docs.google.com/document/d/1-kwXN_crZIBNK7Wc5cUDXXNi_hQ86MgOZIryGdEwpp4/edit
+
 
 # Exercise
 
