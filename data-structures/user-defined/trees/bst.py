@@ -77,19 +77,44 @@ class BST:
 
     
     def _preorderTraversal(self,curNode):
-        print("data",curNode.value)
+        print("preorder data",curNode.value)
         if curNode.left:
             self._preorderTraversal(curNode.left)
         
         if curNode.right:
             self._preorderTraversal(curNode.right)
 
-    def inorderTraversal():
-        pass
+    def inorderTraversal(self):
+        if self.isEmpty():
+            return str("No Data is there")
 
-    def postorderTraversal():
-        pass
+        else:
+            self._inorderTraversal(self.root)
 
+    def _inorderTraversal(self,curNode):
+        if curNode.left:
+            self._inorderTraversal(curNode.left)
+
+        print("inorder data",curNode.value)
+        if curNode.right:
+            self._inorderTraversal(curNode.right)
+
+    def postorderTraversal(self):
+        if self.isEmpty():
+            return str("No Data is there")
+
+        else:
+            self._postorderTraversal(self.root)
+
+    def _postorderTraversal(self,curNode):
+        if curNode.left:
+            self._postorderTraversal(curNode.left)
+
+        
+        if curNode.right:
+            self._postorderTraversal(curNode.right)
+
+        print("posorder data",curNode.value)
 
 
 
@@ -114,3 +139,7 @@ bs.search(5)
 # Traversal 
 
 print(bs.preorderTraversal())
+
+print(bs.inorderTraversal())
+
+print(bs.postorderTraversal())
