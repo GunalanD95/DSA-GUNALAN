@@ -117,6 +117,33 @@ class BST:
         print("posorder data",curNode.value)
 
 
+    def height(self):
+        '''
+        height of a node = number of edges in the longest path from root to the leaf node
+
+        height of a tree = height of the root
+
+        height of the tree with 1 node = 0
+        '''
+        if self.isEmpty():
+            return -1
+        
+
+        return self._height(self.root)
+
+
+
+    def _height(self,curnode):
+        if curnode is None:
+            return -1
+
+        left_height = self._height(curnode.left)
+        right_height = self._height(curnode.right)
+
+        return 1 + max(left_height,right_height)
+        
+
+
 
 bs = BST()
 
@@ -130,6 +157,7 @@ bs.insert(5)
 bs.insert(13)
 bs.insert(30)
 bs.insert(42)
+bs.insert(1)
 
 # Lookup
 bs.search(77)
@@ -143,3 +171,8 @@ print(bs.preorderTraversal())
 print(bs.inorderTraversal())
 
 print(bs.postorderTraversal())
+
+
+
+# height
+print("height",bs.height())
