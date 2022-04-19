@@ -1,4 +1,5 @@
 # Binary Tree - DATA
+from queue import Queue
 
 # Binary Tree Node
 class BinaryTreeNode:
@@ -119,6 +120,31 @@ class BinarySearchTreeNode():
             current = current.left
         print("min",current)
         return current.value
+
+
+    def print_tree(self):
+        if self.root == None:
+            return 
+        else:
+            self._print_tree(self.root)
+
+
+    def _print_tree(self,curNode):
+        q = []
+        q.append(curNode)
+
+        while len(q) != 0:
+            curNode = q.pop(0)
+            print(curNode.value,end= '   ')
+            if curNode.left != None:
+                q.append(curNode.left)
+                # self._print_tree(curNode.left)
+                
+            if curNode.right != None:
+                q.append(curNode.right)
+                # self._print_tree(curNode.right)
+
+
                 
 
         
@@ -133,11 +159,11 @@ bt.insert(1)
 bt.insert(15)
 print(bt.search(15))
 print(bt.search(1))
-print("remove",bt.remove(20))
+# print("remove",bt.remove(20))
 # print("remove",bt.remove(170))
 print("bt",bt.root.value)
 print("bt",bt.root.left.value)
 print("bt",bt.root.right.value)
 
 
-print(" ")
+bt.print_tree()
