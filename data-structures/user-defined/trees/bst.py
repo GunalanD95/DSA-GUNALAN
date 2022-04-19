@@ -126,7 +126,7 @@ class BST:
         height of the tree with 1 node = 0
         '''
         if self.isEmpty():
-            return -1
+            return None
         
 
         return self._height(self.root)
@@ -141,6 +141,38 @@ class BST:
         right_height = self._height(curnode.right)
 
         return 1 + max(left_height,right_height)
+        
+
+    def print_tree(self):
+        if self.isEmpty():
+            return None
+        
+
+        return self._print_tree(self.root,0,self.height())       
+
+    def _print_tree(self,root,space,height):
+        # Base case
+        if root is None:
+            return
+ 
+        # increase distance between levels
+        space += height
+ 
+        # print right child first
+        self._print_tree(root.right, space, height)
+        print()
+ 
+        # print the current node after padding with spaces
+        for i in range(height, space):
+            print(' ', end='')
+ 
+        print(root.value, end='')
+ 
+        # print left child
+        print()
+        self._print_tree(root.left, space, height)
+        
+
         
 
 
@@ -176,3 +208,8 @@ print(bs.postorderTraversal())
 
 # height
 print("height",bs.height())
+
+
+# print a tree
+
+print("print",bs.print_tree())
