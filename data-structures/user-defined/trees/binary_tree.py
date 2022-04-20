@@ -77,10 +77,7 @@ class BinarySearchTreeNode():
         if self.root == None:
             return None
 
-        else:
-            self._remove(self.root,value)
-
-        return self.root
+        return self._remove(self.root,value)
 
     def _remove(self,cur_node,value):
         if self.root == None:
@@ -132,6 +129,7 @@ class BinarySearchTreeNode():
     def _print_tree(self,curNode):
         q = []
         q.append(curNode)
+        # q.append(None)
 
         while len(q) != 0:
             curNode = q.pop(0)
@@ -159,8 +157,8 @@ bt.insert(1)
 bt.insert(15)
 print(bt.search(15))
 print(bt.search(1))
-# print("remove",bt.remove(20))
-# print("remove",bt.remove(170))
+print("remove",bt.remove(20))
+print("remove",bt.remove(1))
 print("bt",bt.root.value)
 print("bt",bt.root.left.value)
 print("bt",bt.root.right.value)

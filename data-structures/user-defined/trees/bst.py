@@ -46,6 +46,39 @@ class BST:
             print("BST doesn't allow duplicate nodes")
         
 
+    def remove(self,value):
+        if self.isEmpty():
+            return None
+
+        else:
+            self._remove(value,self.root)
+
+
+    def _remove(self,value,curNode):
+        if curNode.value > value:
+            if curNode.left:
+                self._remove(value,curNode.left)
+
+        if curNode.value < value:
+            if curNode.right:
+                self._remove(value,curNode.right)
+
+        if curNode.value == value:
+            if curNode.left == None and curNode.right == None:
+                curNode = None
+            elif curNode.left == None:
+                curNode = curNode.right
+            elif curNode.right == None:
+                curNode = curNode.left
+            else:
+                curNode.value = self._find_min(curNode.right)
+                curNode.right = self._remove(curNode.value,curNode.right)
+
+    def _find_min(self,curNode):
+        if curNode.left:
+            return self._find_min(curNode.left)
+        else:
+            return curNode.value
 
 
     def search(self,value):
@@ -213,3 +246,5 @@ print("height",bs.height())
 # print a tree
 
 print("print",bs.print_tree())
+bs.remove(1)
+print(bs.print_tree())
