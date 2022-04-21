@@ -92,15 +92,20 @@ class BinarySearchTreeNode():
 
         if value == cur_node.value:
             if cur_node.left ==  None and cur_node.right ==  None:
+                print("Removing a leaf node")
                 cur_node =  None
+                print("cur_node",cur_node)
+                return 
             
             elif cur_node.left ==  None:
                 temp = cur_node
+                print("temp",temp)
                 cur_node = cur_node.right
                 del temp
                 
             elif cur_node.right ==  None:
                 temp = cur_node
+                print("temp",temp)
                 cur_node = cur_node.left
                 del temp
 
@@ -108,6 +113,7 @@ class BinarySearchTreeNode():
                 temp =  self.findmin(cur_node.right)
                 cur_node.value = temp
                 cur_node.right = self._remove(cur_node.right,temp)
+
 
 
     def findmin(self,cur_node):
@@ -157,8 +163,10 @@ bt.insert(1)
 bt.insert(15)
 print(bt.search(15))
 print(bt.search(1))
+
 print("remove",bt.remove(20))
-print("remove",bt.remove(1))
+# print("remove",bt.remove(1))
+
 print("bt",bt.root.value)
 print("bt",bt.root.left.value)
 print("bt",bt.root.right.value)
