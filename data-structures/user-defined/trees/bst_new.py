@@ -1,5 +1,30 @@
 # Binary Tree   
 
+class Queue:
+
+    def __init__(self) -> None:
+        self.items = []
+
+    def enqueue(self,item):
+        self.items.insert(0,item)
+
+    def dequeue(self):
+        if not self.IsEmpty():
+            self.items.pop()
+
+    def IsEmpty(self):
+        return len(self.items) == 0
+
+    def peek(self):
+        if not self.IsEmpty():
+            return self.items[-1].value
+
+    def __len__(self):
+        return self.size()
+
+    def size(self):
+        return len(self.items)
+    
 class Node:
 
     def __init__(self,value) -> None:
@@ -86,7 +111,30 @@ class Tree():
 
         print(curNode.value)
 
-# Represents a Binary  Tree
+
+    def levelOrder(self):
+        if self.root == None:
+            return 
+        else:
+            self._levelOrder(self.root)
+
+    def _levelOrder(self,curNode):
+        q = []
+        q.append(curNode)
+
+        while len(q) != 0:
+            curNode = q.pop(0)
+            print(curNode.value , end= " ")
+            if curNode.left != None:
+                q.append(curNode.left)
+
+            if curNode.right != None:
+                q.append(curNode.right)
+
+            
+
+
+# Initiaze a Binary  Tree
 
 bst = Tree()
 
@@ -105,8 +153,10 @@ bst.insert(5)
 
 
 # traversal 
-bst.preorderTrav()
+# bst.preorderTrav()
+# print(" ")
+# bst.inorderTrav()
+# print(" ")
+# bst.postOrder()
 print(" ")
-bst.inorderTrav()
-print(" ")
-bst.postOrder()
+bst.levelOrder()
