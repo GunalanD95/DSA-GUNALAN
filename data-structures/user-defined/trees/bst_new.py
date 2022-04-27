@@ -131,6 +131,27 @@ class Tree():
             if curNode.right != None:
                 q.append(curNode.right)
 
+
+    def iterPreOrder(self):
+        if self.root == None:
+            return
+        return self._iterPreOrder(self.root)
+
+    def _iterPreOrder(self,curNode):
+        stack = []
+        stack.append(curNode)
+
+
+        while len(stack) != 0:
+            curNode = stack.pop(-1)
+            print(curNode.value , end= " ")
+            if curNode.right != None:
+                stack.append(curNode.right)
+
+            if curNode.left != None:
+                stack.append(curNode.left)
+
+
             
 
 
@@ -153,10 +174,12 @@ bst.insert(5)
 
 
 # traversal 
-# bst.preorderTrav()
-# print(" ")
-# bst.inorderTrav()
-# print(" ")
-# bst.postOrder()
+bst.preorderTrav()
+print(" ")
+bst.inorderTrav()
+print(" ")
+bst.postOrder()
 print(" ")
 bst.levelOrder()
+print(" ")
+bst.iterPreOrder()
