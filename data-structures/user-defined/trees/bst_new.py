@@ -1,5 +1,8 @@
 # Binary Tree   
 
+from pickletools import stackslice
+
+
 class Queue:
 
     def __init__(self) -> None:
@@ -151,9 +154,29 @@ class Tree():
             if curNode.left != None:
                 stack.append(curNode.left)
 
+    def iterInOrder(self):
+        if self.root == None:
+            return
+        return self._iterInOrder(self.root)
+
+    def _iterInOrder(self,curNode):
+        stack = []
+        k = []
+
+        while True:
+            if curNode != None:
+                stack.append(curNode)
+                curNode = curNode.left
+            else:
+                if len(stack) == 0:
+                    break
+                curNode = stack.pop()
+                k.append(curNode.value)
+                curNode = curNode.right
+
+        return k
 
             
-
 
 # Initiaze a Binary  Tree
 
@@ -174,12 +197,13 @@ bst.insert(5)
 
 
 # traversal 
-bst.preorderTrav()
+# bst.preorderTrav()
 print(" ")
 bst.inorderTrav()
-print(" ")
-bst.postOrder()
-print(" ")
-bst.levelOrder()
-print(" ")
-bst.iterPreOrder()
+# print(" ")
+# bst.postOrder()
+# print(" ")
+# bst.levelOrder()
+# print(" ")
+# bst.iterPreOrder()
+print(bst.iterInOrder())
