@@ -21,13 +21,13 @@ print(findlarge(b))
 def findsmall(ls):
     return min(ls)
 
-print("small using min-a",findsmall(a))
-print("small using min-b",findsmall(b))
+# print("small using min-a",findsmall(a))
+# print("small using min-b",findsmall(b))
 
 
 # 3 using  loop
-b = [100,20, 10, 20, 1]
-a = [10, 20, 4]
+b = [98, 83, 54, 57, 36, 83, 7, 98, -3, 37]
+a = [-15, -45, 43, 23, -63, 69, 35, 19, 37, -52]
 
 def findsmallnum(ls):
     minm = ls[0]
@@ -39,4 +39,6 @@ def findsmallnum(ls):
 
 
 print("mim b",findsmallnum(b))
-# print("mim a",findsmallnum(a))
+print("mim a",findsmallnum(a))
+print(findlarge(a))
+print(findlarge(b))
